@@ -1,0 +1,30 @@
+/* User Inputs 5 Ints
+  Check if Valid
+  Calculate Area*/
+import java.util.Scanner;
+public class TrueTriangle {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Side: ");
+        double sideA = input.nextDouble();
+        System.out.print("Side: ");
+        double sideB = input.nextDouble();
+        System.out.print("Side: ");
+        double sideC = input.nextDouble();
+        if (trueTriangle(sideA, sideB, sideC) == true){
+            System.out.println("Input Valid");
+            double area = areaTriangle(sideA, sideB, sideC);
+            System.out.println("Area: " + area);
+        } else System.out.println("Input Invalid");
+    }
+    public static boolean trueTriangle(double sideA, double sideB,double sideC){
+        if ((sideA + sideB > sideC) && (sideB + sideC > sideA) && (sideA + sideC > sideB)){
+            return true;
+        }
+        return false;
+    }
+    public static double areaTriangle(double sideA, double sideB, double sideC){
+        double s = (sideA + sideB + sideC)/2;
+        return Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC));
+    }
+}
