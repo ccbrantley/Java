@@ -1,0 +1,16 @@
+/* Calculate Gratuity and Total Bill Cost
+  From User Input Subtotal and Gratuity Rate*/
+import java.util.Scanner;
+public class CalculateTips {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("SubTotal: ");
+        double subTotal = input.nextDouble();
+        System.out.print("Gratuity Rate(.00): ");
+        double gratuityRate = input.nextDouble();
+        double gratuity = gratuityRate * subTotal;
+        double total = gratuity + subTotal;
+        System.out.println("Gratuity: " + gratuity);
+        System.out.println("Total: " + total);
+    }
+}
