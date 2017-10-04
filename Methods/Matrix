@@ -1,0 +1,20 @@
+/*Matrix of 0 or 1
+  User input*/
+import java.util.Scanner;
+public class Matrix {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input: ");
+        int user_input = input.nextInt();
+        printMatrix(user_input);
+    }
+    public static void printMatrix(int n){
+        for(int i = 1; i <= n; i++){
+            for(int o = 1; o <= n; o++){
+                int randnum = (int)(Math.random() * 2 );
+                System.out.print(randnum);
+            }
+            System.out.println();
+        }
+    }
+}
