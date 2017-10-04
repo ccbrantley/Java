@@ -1,0 +1,23 @@
+/*Outputs Text Graphics
+  Using user input of integer.
+  Resembles Stairs*/
+import java.util.Scanner;
+public class TextPattern {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("(1-9)Integer: ");
+        int user_input = input.nextInt();
+        displayPattern(user_input);
+    }
+    public static void displayPattern (int n){
+        for (int i = 1; i <= n; i++) {
+            for (int y = (10 - i); y > 0; y--){
+                System.out.print(" ");
+            }
+            for(int j = i; j > 0; j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
