@@ -1,0 +1,13 @@
+/* Taking user input for Celsius
+ Converting to fahrenheit */
+import java.util.Scanner;
+public class FahrenheitConversion {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Degrees Celsius: ");
+        double celsiusDegree = input.nextDouble();
+        double fahrenheitDegree = (9.00/5) * celsiusDegree + 32;
+        System.out.println("Degrees Fahrenheit: " + fahrenheitDegree);
+
+    }
+}
