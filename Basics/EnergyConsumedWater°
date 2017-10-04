@@ -1,0 +1,16 @@
+/*Calculate Energy used in water
+  temperature change*/
+import java.util.Scanner;
+public class CalculateEnergyWaterChange {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("(KG)Water Weight: " );
+        double waterWeight = input.nextDouble();
+        System.out.print("(C)Initial Temperature: ");
+        double iTemp = input.nextDouble();
+        System.out.print("(C)Final Temperature: ");
+        double oTemp = input.nextDouble();
+        double energy = waterWeight*(oTemp - iTemp) * 4184;
+        System.out.println("Energy needed " + energy + " Joules");
+    }
+}
