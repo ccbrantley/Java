@@ -1,0 +1,19 @@
+/*Thirty Year Investment Increase
+ User inputs investment and interest rate*/
+import java.util.Scanner;
+public class InvestmentValue {
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Investment Value: ");
+        double investValue = input.nextDouble();
+        System.out.print("(.00)Interest Rate: ");
+        double interestRate = input.nextDouble();
+        System.out.println("Years      Value");
+        for(int i = 1; i < 30; i ++){
+            double yearValue =  (investValue * interestRate) + investValue;
+            investValue = yearValue;
+            System.out.println(i + "    " + yearValue);
+        }
+    }
+}
