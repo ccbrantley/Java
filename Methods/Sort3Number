@@ -1,0 +1,22 @@
+/* Sort three int's by value
+  Prompt user for three int input*/
+import java.util.Scanner;
+public class SortInt {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Number: ");
+        double num1 = input.nextDouble();
+        System.out.print("Number: ");
+        double num2 = input.nextDouble();
+        System.out.print("Number: ");
+        double num3 = input.nextDouble();
+        displaySortedNumbers(num1, num2, num3);
+    }
+    public static void displaySortedNumbers(double num1, double num2, double num3){
+        double greatestNum = Math.max(num1, Math.max(num2, num3));
+        double leastNum = Math.min(num1, Math.min(num2, num3));
+        double middleNum = (num1 + num2 + num3) - (greatestNum + leastNum);
+        System.out.println(leastNum + " " + middleNum + " " + greatestNum);
+
+    }
+}
