@@ -1,0 +1,49 @@
+/*Converts Telephone Numbers,
+  That Contain Letters, into Numbers*/
+import java.util.Scanner;
+public class Telephone {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Number: ");
+        String user_input = input.nextLine();
+        int numLength = user_input.length();
+        for (int i = 0; i < numLength; i++) {
+            if (user_input.charAt(i) == '-'){
+                System.out.print('-');
+            }
+            else if (Character.isDigit(user_input.charAt(i))) {
+                System.out.print(user_input.charAt(i));
+            }
+            else if(Character.isAlphabetic(user_input.charAt(i))){
+                int exchanged = getnumber(user_input.charAt(i));
+                System.out.print(exchanged);
+            }
+        }
+    }
+    public static int getnumber(char letter){
+        letter = Character.toUpperCase(letter);
+        if ((letter == 'A') || (letter == 'B') || (letter == 'C')){
+            return 2;
+        }
+        else if ((letter == 'D') || (letter == 'E') || (letter == 'F')){
+            return 3;
+        }
+        else if ((letter == 'G') || (letter == 'H') || (letter == 'I')){
+            return 4;
+        }
+        else if ((letter == 'J') || (letter == 'K') || (letter == 'L')){
+            return 5;
+        }
+        else if ((letter == 'M') || (letter == 'N') || (letter == 'O')){
+            return 6;
+        }
+        else if ((letter == 'P') || (letter == 'Q') || (letter == 'R') || (letter == 'S')){
+            return 7;
+        }
+        else if ((letter == 'T') || (letter == 'U') || (letter == 'V')){
+            return 8;
+        }
+        else return 9;
+        //if ((letter == 'W') || (letter == 'X') || (letter == 'Y') || (letter == 'Z'))
+    }
+}
