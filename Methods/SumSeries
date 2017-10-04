@@ -1,0 +1,17 @@
+/*Sum Series of Integers using
+ Formula (i/(i+1))*/
+import java.util.Scanner;
+public class SumSeries {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Integer: ");
+        int user_input = input.nextInt();
+        double runningTotal = 0;
+        double currentProblem;
+        for(double i = 1.00; i <= user_input; i++){
+            currentProblem = (i/(i+1));
+            runningTotal += currentProblem;
+            System.out.println(i + "    " + runningTotal);
+        }
+    }
+}
