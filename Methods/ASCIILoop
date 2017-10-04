@@ -1,0 +1,22 @@
+/*ASCII Loop for Output
+ */
+public class LtoZ {
+    public static void main(String[] args){
+        char ch1 = 49;
+        char ch2 = 'Z';
+        printChars(ch1, ch2);
+    }
+
+    public static void printChars(char ch1, char ch2){
+        int runTotal = 0;
+        for(ch1 = ch1; ch1 <= ch2; ch1++) {
+            runTotal++;
+            System.out.print(ch1);
+            if (runTotal == 10) {
+                System.out.println();
+                runTotal = 0;
+            }
+        }
+
+    }
+}
