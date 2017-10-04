@@ -1,0 +1,10 @@
+import java.util.Scanner;
+public class LbsToKgs {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Pounds: ");
+        double pounds = input.nextDouble();
+        double kilograms = pounds * .454;
+        System.out.println("Kilograms: " + kilograms);
+    }
+}
