@@ -1,0 +1,29 @@
+/* Method Demonstration Converting
+  Meters to Feet... vice versa*/
+import java.util.Scanner;
+public class LengthConversion {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Conversion between feet and meter.");
+        System.out.println("0:(Feet to Meter)");
+        System.out.println("1:(Meter to Feet)");
+        int user_choice = input.nextInt();
+        System.out.print("Value: ");
+        double user_input = input.nextDouble();
+        if (user_choice == 0){
+            double conversion = f2m(user_input);
+            System.out.println(conversion + " meters");
+        }
+        else if (user_choice == 1) {
+            double conversion = m2f(user_input);
+            System.out.println(conversion + " feet");
+        }
+
+    }
+    public static double f2m(double i){
+        return .305 * i;
+    }
+    public static double m2f(double i){
+        return 3.279 * i;
+    }
+}
