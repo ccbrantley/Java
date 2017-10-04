@@ -1,0 +1,18 @@
+// Returns Pentagonal Number 1-100
+// Ten per line
+public class PentagonalNumbers {
+    public static void main(String[] args) {
+        int runTotal = 0;
+        for(int i = 1; i < 100; i++){
+            System.out.print(getPentagonalNumber(i)+ " ");
+            runTotal++;
+            if (runTotal == 10){
+                System.out.println();
+                runTotal = 0;
+            }
+        }
+    }
+    public static int getPentagonalNumber(int i){
+        return (i*(3*i-1)/2);
+    }
+}
