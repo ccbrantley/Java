@@ -1,0 +1,27 @@
+/* Calculates Pi
+  By desired accuracy*/
+import java.util.Scanner;
+public class CalculatePi {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Integer: ");
+        int user_input = input.nextInt();
+        double repeaterTotal = 1;
+        boolean guessing = true;
+        double pi = 0;
+        for(double i = 3; i <= user_input; i += 2){
+            double repeater = (1/i);
+            if (guessing == true){
+                repeaterTotal -= repeater;
+                guessing = false;
+            }
+            else if (guessing == false){
+                repeaterTotal += repeater;
+                guessing = true;
+            }
+            pi = 4*((repeaterTotal + 1/(2*i-1)));
+            System.out.println(i + "    " + pi);
+        }
+
+    }
+}
