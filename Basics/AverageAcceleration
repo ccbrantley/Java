@@ -1,0 +1,17 @@
+/* Calculate Average Acceleration
+  From user input*/
+import java.util.Scanner;
+public class AvereageAcceleration {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("(Meters per Second)Starting Velocity: ");
+        double sVelocity = input.nextDouble();
+        System.out.print("(Meters per Second)Ending Velocity: ");
+        double eVelocity = input.nextDouble();
+        System.out.print("(Seconds)Time Span: ");
+        double time = input.nextDouble();
+        double avgAcceleration = (eVelocity - sVelocity) / time;
+        System.out.print("Average Acceleration: ");
+        System.out.printf("%.2f", avgAcceleration);
+    }
+}
