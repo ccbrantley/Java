@@ -1,0 +1,16 @@
+/*Calculates Days in User
+  Input of years*/
+import java.util.Scanner;
+public class DaysInYear {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Years: ");
+        int years = input.nextInt();
+        int days = numberofDaysInAYear(years);
+        System.out.println("Days: " + days);
+
+    }
+    public static int numberofDaysInAYear(int years){
+        return years * 365;
+    }
+}
