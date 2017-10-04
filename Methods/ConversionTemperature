@@ -1,0 +1,26 @@
+/* Method Use for Conversion Temperature
+  F2C OR C2F (user input needed)*/
+import java.util.Scanner;
+public class TemperatureConversion {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input(F2c = 0 or C2f = 1): ");
+        int conversionChoice = input.nextInt();
+        System.out.print("Temperature: ");
+        double user_temp = input.nextDouble();
+        if (conversionChoice == 0){
+            double vertTemp = f2c(user_temp);
+            System.out.println("Celsius: " + vertTemp);
+        }
+        else if (conversionChoice == 1){
+            double vertTemp = c2f(user_temp);
+            System.out.println("Fahrenheit: " + vertTemp);
+        }
+    }
+    public static double f2c(double i){
+        return ((5.0/9)*(i-32));
+    }
+    public static double c2f(double i) {
+        return (9.0 / 5) * i + 32;
+    }
+}
