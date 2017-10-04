@@ -1,0 +1,19 @@
+/*Babylonian SQRT Approximater 
+ */
+import java.util.Scanner;
+public class BabylonianSqrt{
+    public static void main (String[] args){
+        System.out.println("Input: ");
+        Scanner input = new Scanner(System.in);
+        double n = input.nextDouble();
+        double guess = 1;
+        double diff = 1;
+        double lastguess = guess;
+        while(Math.abs(diff) > .001){
+            guess = (guess + n / guess) / 2;
+            diff = (guess - lastguess);
+            lastguess = guess;
+            System.out.println(guess);
+        }
+    }
+}
