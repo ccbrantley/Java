@@ -1,0 +1,14 @@
+/* Calculate Years and Days 
+  From user input of minutes*/
+import java.util.Scanner;
+public class MinuteConversion {
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Minutes: " );
+        int user_minutes = input.nextInt();
+        int years = (user_minutes / 1440)/365;
+        int days = (user_minutes - (years * 365 * 1440)) / 1440;
+        System.out.println("Years: " + years);
+        System.out.println("Days: " + days);
+    }
+}
