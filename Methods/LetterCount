@@ -1,0 +1,21 @@
+/* Takes User Input String
+  Calculates length*/
+import java.util.Scanner;
+public class CountLetters {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input: ");
+        String user_input = input.nextLine();
+        int letterCount = count(user_input);
+        System.out.println("Letter Count: " + letterCount);
+    }
+    public static int count(String s){
+        int letterCount = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(Character.isAlphabetic(s.charAt(i))){
+                letterCount++;
+            }
+        }
+        return letterCount;
+    }
+}
