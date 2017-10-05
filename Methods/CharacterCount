@@ -1,0 +1,24 @@
+/* Counts Characters from Strings
+  from User input*/
+import java.util.Scanner;
+public class CountChar {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("String: ");
+        String user_string = input.nextLine();
+        System.out.print("Char: ");
+        char user_char = input.next().charAt(0);
+        int occurCount = count(user_string, user_char);
+        System.out.println("Occurence: " + occurCount);
+    }
+    public static int count(String str, char a){
+        int strLength = str.length();
+        int runTotal = 0;
+        for(int i = 0; i < strLength; i++){
+            if(str.charAt(i) == a){
+                runTotal++;
+            }
+        }
+        return runTotal;
+    }
+}
