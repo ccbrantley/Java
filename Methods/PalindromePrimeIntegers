@@ -1,0 +1,40 @@
+/* Finding Prime Palindrome Integers;
+ */
+public class PrimePalindrome {
+    public static void main(String[] args) {
+        int totalPrimePalindrome = 0;
+        int i =1;
+        while (totalPrimePalindrome != 100){
+            i++;
+            if (isPrime(i) == true){
+                if(isPalindrome(i) == true){
+                    System.out.println(i + " is a Palindrome Prime.");
+                    totalPrimePalindrome++;
+                }
+            }
+        }
+    }
+    public static boolean isPrime(int i) {
+        for (int o = 2; o < i; o++) {
+            if (i % o == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isPalindrome(int number){
+        int intLength = Integer.toString(number).length();
+        int new_number = 0;
+        int gen_number = number;
+        for (int i = 0; i < intLength; i++){
+            new_number *= 10;
+            new_number += gen_number % 10;
+            gen_number /= 10;
+        }
+        if(new_number == number){
+            return true;
+        }
+        else return false;
+
+    }
+}
