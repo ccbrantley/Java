@@ -1,0 +1,20 @@
+/* Current Date and Time
+ Two ways to find
+  also Convert milliseconds to...*/
+import java.time.LocalDateTime;
+import java.util.Date;
+public class DateAndTime {
+ public static void main(String [] args){
+        System.out.println(new Date());
+     System.out.println(LocalDateTime.now());
+     long milliseconds = System.currentTimeMillis();
+     long seconds = milliseconds/1000;
+     long currentSecond = seconds % 60;
+     long minutes = seconds / 60;
+     long currentMinute = minutes % 60;
+     long hours = minutes / 60;
+     long currentHour = hours % 24;
+     System.out.println(currentHour + " " + currentMinute + " " + currentSecond);
+    }
+}
+
