@@ -1,0 +1,25 @@
+/* Finds Mersenne Primes
+  Mersenne Primes are defined as being
+  prime numbers that are one less
+  then a power of two*/
+public class MersennePrime {
+    public static void main(String[] args) {
+        System.out.println("Mersenne Prime Numbers");
+        for (int i = 2; i <= 31; i++) {
+            if (isPrime(i)) {
+                if (isPrime((int) Math.pow(2, i) - 1)) {
+                    System.out.println("Prime: " + i + "    " + "Result: " + (int)(Math.pow(2, i) - 1));
+                }
+            }
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
