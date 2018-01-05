@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class forever {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Here we will take user input of minutes and calculate the respective days and years.");
+        System.out.print("Enter Minutes: ");
+        int minutes = input.nextInt();
+        double years, days;
+        if (minutes >= 525600) {
+            years = minutes / 525600;
+            days =  (minutes - (years * 525600)) / 1440;
+        }
+        else{
+            years = 0;
+            days = minutes / 1440;
+        }
+        System.out.println("Years: " + years + "\nDays: " + days);
+    }
+}
