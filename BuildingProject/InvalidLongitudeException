@@ -1,0 +1,5 @@
+public class InvalidLongitudeException extends Exception {
+    @Override
+    // Longitude Exception getMessage override for user knowledge
+public String getMessage() { return "Invalid Value for Longitude..."; }
+}
