@@ -3,9 +3,7 @@ import java.util.Scanner;
 /*
 Christopher Brantley
 12/5/2017
-CSC 151 FON01
 This is my original work.
-Provided Instructional Videos were followed and provided framework for classes used.
  */
 public class Test {
     public static void main (String [] args) {
