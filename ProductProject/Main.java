@@ -2,7 +2,6 @@
  * Christopher Brantley
  * 1/31/2018
  * This is my original work.
- * For CSC 251, Rebecca Halsey
  */
 
 import java.io.File;
