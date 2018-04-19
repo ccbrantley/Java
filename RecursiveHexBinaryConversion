@@ -14,21 +14,16 @@ public class Forever {
             return Integer.toString(value%2) + dec2Bin(value/2);
         }
         else return "";
-
     }
-
-
     public static double bin2Dec(String binaryString){
         if (Double.parseDouble(binaryString) == 1){
             return 1;
         }
         else if (Double.parseDouble(binaryString) > 0){
             return (int)(Double.parseDouble(String.valueOf((binaryString.charAt(0)))) * Math.pow(2,binaryString.length() - 1)) + bin2Dec(binaryString.substring(1));
-
         }
         else return 0;
     }
-
     public static int hex2Dec(String hexString) {
         if (hexString.length() > 1) {
             if (Character.isAlphabetic(hexString.charAt(1))) {
@@ -38,7 +33,6 @@ public class Forever {
             } else return 0;
         } else return 0;
     }
-
     public static String dec2Hex(int value){
         int currentValue;
         if (value == 1){
@@ -50,7 +44,6 @@ public class Forever {
                 return String.valueOf(currentValue) + dec2Hex(value/16);
             }
             else return hexValue2Alpha(currentValue) + dec2Hex(value/16);
-
         }
         else return "0";
     }
