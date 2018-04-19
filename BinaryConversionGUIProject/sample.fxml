@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane alignment="center" hgap="10" prefHeight="450.0" prefWidth="450.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="523.0" prefWidth="568.0">
+         <bottom>
+            <SplitPane dividerPositions="0.5" prefHeight="82.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id = "btnClear" layoutX="54.0" layoutY="13.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="113.0" text="Clear">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id = "btnConvert" layoutX="54.0" layoutY="13.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="113.0" text="Convert" />
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </bottom>
+         <top>
+            <SplitPane orientation="VERTICAL" prefHeight="62.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="448.0">
+                     <children>
+                        <Text layoutX="6.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Binary/Hex to Decimal Conversion" wrappingWidth="435.849609375">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </top>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <right>
+            <Pane prefHeight="306.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="82.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id = "lblConverOutput" layoutX="98.0" layoutY="177.0" text=". . . ." />
+               </children>
+            </Pane>
+         </right>
+         <center>
+            <Pane prefHeight="306.0" prefWidth="226.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ChoiceBox fx:id = "chcConversion" layoutX="50.0" layoutY="139.0" prefHeight="25.0" prefWidth="129.0" />
+                  <Text layoutX="51.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input to Output">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="52.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choice" textAlignment="CENTER" wrappingWidth="124.96484375">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id = "txtConverValue" layoutX="50.0" layoutY="231.0" prefHeight="25.0" prefWidth="129.0" />
+                  <Text layoutX="68.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Value to be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="68.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Converted">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
