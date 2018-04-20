@@ -38,15 +38,18 @@ public class Controller implements Initializable {
         btnConvert.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (chcConversion.getValue() == "Decimal to Binary") {
-                    lblConverOutput.setText(new StringBuilder((Conversion.dec2Bin(Integer.parseInt(txtConverValue.getText())))).reverse().toString());
-                } else if (chcConversion.getValue() == "Decimal to Hex") {
-                    lblConverOutput.setText("0x" + new StringBuilder(Conversion.dec2Hex(Integer.parseInt(txtConverValue.getText()))).reverse().toString());
-                } else if (chcConversion.getValue() == "Binary to Decimal") {
-                    lblConverOutput.setText(String.valueOf(Conversion.bin2Dec(txtConverValue.getText())).toString());
-                } else if (chcConversion.getValue() == "Hex to Decimal") {
-                    lblConverOutput.setText(String.valueOf(Conversion.hex2Dec(txtConverValue.getText())).toString());
+                try {
+                    if (chcConversion.getValue() == "Decimal to Binary") {
+                        lblConverOutput.setText(new StringBuilder((Conversion.dec2Bin(Integer.parseInt(txtConverValue.getText())))).reverse().toString());
+                    } else if (chcConversion.getValue() == "Decimal to Hex") {
+                        lblConverOutput.setText("0x" + new StringBuilder(Conversion.dec2Hex(Integer.parseInt(txtConverValue.getText()))).reverse().toString());
+                    } else if (chcConversion.getValue() == "Binary to Decimal") {
+                        lblConverOutput.setText(String.valueOf(Conversion.bin2Dec(txtConverValue.getText())).toString());
+                    } else if (chcConversion.getValue() == "Hex to Decimal") {
+                        lblConverOutput.setText(String.valueOf(Conversion.hex2Dec(txtConverValue.getText())).toString());
+                    }
                 }
+                catch(Exception e){lblConverOutput.setText("Incorrect input format.");}
             }
         });
     }
